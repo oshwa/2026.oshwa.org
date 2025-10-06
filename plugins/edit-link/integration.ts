@@ -35,7 +35,7 @@ export default function createPlugin(): AstroIntegration {
                     content: "declare module 'virtual:routes' {}",
                 });
             },
-            "astro:routes:resolved": ({ routes }) => {
+            "astro:routes:resolved": ({ routes, logger }) => {
                 for (const route of routes) {
                     if (
                         !route.isPrerendered ||
@@ -55,11 +55,14 @@ export default function createPlugin(): AstroIntegration {
                         redirect: route.redirect,
                     };
                 }
+
                 writeFileSync(
                     generatedFile,
                     generateRoutesFile(projectRoutes),
                     "utf-8"
                 );
+
+                logger.info(`Gathered ${Object.keys(projectRoutes).length} routes.`)
             },
         },
     };
