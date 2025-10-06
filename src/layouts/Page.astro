@@ -1,0 +1,18 @@
+---
+import Content from "../components/Content.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+    title: string;
+    description?: string;
+    frontmatter?: Record<string, string>;
+}
+
+let { title, description } = { ...Astro.props, ...Astro.props.frontmatter };
+---
+
+<BaseLayout title={`${title} | Open Hardware Summit`} description={description}>
+    <Content classList={{ page: true }}>
+        <slot />
+    </Content>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+export interface Props {
+    baseUrl: string;
+}
+
+const { baseUrl } = Astro.props;
+
+const filePath = Astro.locals.route?.entrypoint;
+const githubUrl = filePath ? `${baseUrl}/blob/main/${filePath}` : null;
+---
+
+{githubUrl && <a href={githubUrl} target="_blank">Edit on GitHub</a>}

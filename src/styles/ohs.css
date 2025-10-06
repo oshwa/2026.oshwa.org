@@ -1,0 +1,92 @@
+/* OHS CSS */
+
+@import "/styles/bulma.min.css";
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Megrim&display=swap");
+
+/* Global variables */
+
+:root {
+    --ohs-family-display: "Megrim", serif;
+    --ohs-family-text: "Inconsolata", monospace;
+
+    --ohs-color-text: #222;
+    --ohs-color-aqua: #5ec8e5;
+    --ohs-color-sunflower: #ffb511;
+    --ohs-color-mixed-green: #88c142;
+}
+
+/* Bulma customizations */
+
+:root {
+    --bulma-body-size: 20px;
+    --bulma-family-primary: var(--ohs-family-text);
+    --bulma-text: var(--ohs-color-text);
+    --bulma-text-strong: var(--ohs-color-text);
+}
+
+/* Global helpers */
+
+.is-family-display {
+    font-family: var(--ohs-family-display);
+    font-weight: bold;
+}
+
+/* Customizations */
+
+.navbar-brand {
+    .navbar-item {
+        font-family: var(--ohs-family-display);
+        font-weight: bold;
+        color: var(--ohs-color-text);
+    }
+}
+
+.content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        --drop-highlight-color: var(--ohs-color-sunflower);
+        font-family: var(--ohs-family-display);
+    }
+
+    strong {
+        --drop-highlight-color: var(--ohs-color-mixed-green);
+        color: var(--ohs-color-text);
+        font-weight: normal;
+    }
+
+    a {
+        --drop-highlight-color: var(--ohs-color-aqua);
+        color: var(--ohs-color-text);
+    }
+}
+
+/* Drop shadow highlights for various bits */
+
+.drop-highlight,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content strong,
+.content a {
+    --ds-left: 0.05em;
+    --ds-top: 0.4em;
+    --ds-bg: color-mix(in srgb, var(--drop-highlight-color, var(--ohs-color-aqua)) 50%, transparent);
+    background-color: transparent;
+    background-image: linear-gradient(var(--ds-bg), var(--ds-bg));
+    background-size: 100% 100%;
+    background-position: var(--ds-left) var(--ds-top);
+    background-repeat: no-repeat;
+    box-shadow: var(--ds-left) var(--ds-top) var(--ds-bg);
+}
+
+/* Other bits */

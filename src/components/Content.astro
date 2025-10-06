@@ -1,0 +1,12 @@
+---
+export interface Props {
+    classList?: Record<string, boolean>;
+}
+
+const { classList } = Astro.props;
+
+---
+
+<div class:list={{content: true, ...classList}}>
+    <slot />
+</div>

@@ -1,0 +1,31 @@
+---
+import EditLink from "../../plugins/edit-link/EditLink.astro";
+import metadata from "../metadata"
+
+const filePath = Astro.locals.route?.entrypoint;
+const githubUrl = filePath ? `${metadata.github.url}/blob/main/${filePath}` : null;
+---
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      © { metadata.copyright.year } {metadata.copyright.author}
+    </p>
+    <p>
+      Design by <a href="https://bleeptrack.de/">bleeptrack</a>, web design by <a href="https://thea.codes">stargirl</a>
+    </p>
+    <p>
+      Published under <a href={metadata.copyright.license.url} target="_blank">{metadata.copyright.license.name}</a>
+    </p>
+    <p>
+      <EditLink baseUrl={metadata.github.url} />
+    </p>
+  </div>
+</footer>
+
+<style>
+footer {
+    margin-top: 4rem;
+    --bulma-footer-background-color: transparent;
+}
+</style>

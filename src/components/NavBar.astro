@@ -1,0 +1,82 @@
+---
+import config from "../metadata";
+const items = {
+    "Attend": "/attend",
+    "Sponsor": "/sponsor",
+    "Fellowship": "/fellowship",
+    "Code of Conduct": "/code-of-conduct",
+};
+
+const currentRoute = Astro.locals.route?.pathname;
+
+---
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            {config.title.short}
+        </a>
+        <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+        >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+            {
+                Object.entries(items).map(([name, url]) => (
+                    <a class="navbar-item" href={url} class:list={{"is-active": currentRoute == url}}>
+                        {name}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</nav>
+
+<script>
+    /**
+     * Hamburger menu functionality.
+     *
+     * See https://bulma.io/documentation/components/navbar/#navbar-menu
+     */
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const burgers = document.querySelectorAll(".navbar-burger");
+        for (const burger of burgers) {
+            const target = burger
+                .closest(".navbar")
+                ?.querySelector(".navbar-menu");
+            if (!target) {
+                console.error(`Hamburger target for ${burger} not found.`);
+                return;
+            }
+            burger.addEventListener("click", () => {
+                burger.classList.toggle("is-active");
+                target.classList.toggle("is-active");
+            });
+        }
+    });
+</script>
+
+<style>
+nav.navbar {
+    margin-bottom: 1rem;
+
+
+    font-family: var(--ohs-family-display);
+    font-weight: bold;
+
+    .navbar-link.is-active, .navbar-link.is-selected, a.navbar-item.is-active, a.navbar-item.is-selected  {
+        background-color: color-mix(in srgb, var(--ohs-color-mixed-green) 50%, transparent);
+    }
+}
+</style>

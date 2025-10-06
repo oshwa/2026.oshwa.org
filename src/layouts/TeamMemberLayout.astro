@@ -1,0 +1,19 @@
+---
+import TeamMember from "../components/TeamMember.astro";
+const { frontmatter } = Astro.props;
+import dynamicImportImage from "../components/dynamic-import-image";
+
+const importedImage = await dynamicImportImage(
+    frontmatter.image,
+    frontmatter.file
+);
+---
+
+<TeamMember
+    name={frontmatter.name}
+    image={importedImage}
+    role={frontmatter.role}
+    bluesky={frontmatter.bluesky}
+>
+    <slot />
+</TeamMember>
