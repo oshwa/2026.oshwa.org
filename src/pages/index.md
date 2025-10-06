@@ -2,7 +2,7 @@
 layout: ../layouts/Home.astro
 ---
 
-OHS 2025 will take place in Berlin at [TU Berlin] on **May 22nd & 23rd, 2026**!
+OHS 2026 will take place in Berlin at [TU Berlin] on **May 22nd & 23rd, 2026**!
 
 [TU Berlin]: https://www.tu.berlin
 
@@ -55,7 +55,7 @@ Here's what you'll get:
 - Connected with some of the world's most active open source communities. Past sponsors have included Sparkfun, Arduino, Digi-Key, and other key players in the hardware community.
 - A free or discounted ticket to the event.
 - Free opportunity to exhibit your work to over 300 people.
-- A hand in forming the vision for one of the largest Open Source events in 2025.
+- A hand in forming the vision for one of the largest Open Source events in 2026.
 - An unforgettable experience with cool people from around the world!
 - An opportunity to connect globally with people working in your field- be it academically, recreationally, or within the industry.
 

@@ -4,7 +4,7 @@ export default {
         short: "OHS 2026",
     },
     copyright: {
-        year: "2025",
+        year: "2026",
         author: "Open Source Hardware Association",
         license: {
             name: "CC BY-SA 4.0",
