@@ -2,7 +2,7 @@
 layout: ../layouts/Home.astro
 ---
 
-OHS 2026 will take place in Berlin at [TU Berlin] on **May 22nd & 23rd, 2026**!
+OHS 2026 will take place in Berlin at [TU Berlin] on **May 23rd & 24th, 2026**!
 
 [TU Berlin]: https://www.tu.berlin
 

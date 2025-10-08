@@ -5,7 +5,7 @@ title: Attend
 
 # Attend OHS 2026
 
-Open Hardware Summit takes place on **May 22nd & 23rd, 2026**.
+Open Hardware Summit takes place on **May 23rd & 24th, 2026**.
 
 Tickets will be available **soon**. In the meantime, you can [sign up for our newsletter][newsletter], or [drop us an email][email].
 
