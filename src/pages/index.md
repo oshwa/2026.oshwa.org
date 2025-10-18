@@ -22,7 +22,7 @@ We are accepting TALKS and WORKSHOPS, PERFORMANCES, ART and EXHIBITIONS.
 
 DEADLINE: Sunday, December 21, 2025.
 
-[submit your proposal]: https://presenters.oshwa-summit.org/2026/submit/S2V3VZ/profile/
+submit your proposal: https://presenters.oshwa-summit.org/2026/submit/S2V3VZ/profile/
 
 More details to come! In the meantime, [get involved], [sign up for our newsletter][newsletter], or [drop us an email][email]!
 
