@@ -6,6 +6,24 @@ OHS 2026 will take place in Berlin at [TU Berlin] on **May 23rd & 24th, 2026**!
 
 [TU Berlin]: https://www.tu.berlin
 
+The Summit, including its chairs and staff, is primarily volunteer-based and OSHWA operates as a 501(c)(3) non-profit. We cannot offer speaker stipends. We do have a fellowship program that may offer financial support. Please email us for more information or check the Summit website.
+
+DEADLINE: Sunday, December 21, 2025.
+
+We invite talk proposals from individuals, groups, collectives, collaborators, and first time presenters.
+
+We are actively seeking submissions from people, ideas, and perspectives traditionally under represented in Open Hardware and technology in general. We ask for your help to reach people who might not be part of communities that typically circulate these calls - Please share! We actively seek submissions from people of color, women, members of the LGBTQ+ community, gender non conforming and trans people, people with disabilities, indigenous people, people of varying socio-economic status, people of varying levels of formalized education, people from various global communities, and other marginalized populations
+
+If you are a first time speaker and would like mentorship or to go over your presentation or submission, don't hesitate to reach out to lee at hello@leecyb.org or summit@oshwa.org
+
+This years event will take place in Berlin, Germany, May 23 & 24, 2026! All talks will be live streamed, limited remote talks permitted!
+
+You may submit more than 1 proposal.
+
+We are accepting TALKS and WORKSHOPS, PERFORMANCES, ART and EXHIBITIONS.
+
+[submit your proposal]: https://presenters.oshwa-summit.org/2026/submit/S2V3VZ/profile/
+
 More details to come! In the meantime, [get involved], [sign up for our newsletter][newsletter], or [drop us an email][email]!
 
 [get involved]: #get-involved
