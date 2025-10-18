@@ -9,5 +9,5 @@ The Summit Fellowship was founded in 2013 prior to the annual Open Hardware Summ
 
 For the thirteenth year, we are excited to offer up **Open Hardware Fellowships** to ten members of the community which includes a stipend, entrance to the Open Hardware Summit and mentorship opportunities leading up to the event.
 
-Fellowship applications are officially open! You can self-nominate for the Summit Fellowship through [this form] (https://forms.gle/WFKaiJfnQACwuD7D8). The application is open until December 21st 2025 at 11pm EDT. 
+Fellowship applications are officially open! You can self-nominate for the Summit Fellowship through [this form]: https://forms.gle/WFKaiJfnQACwuD7D8. The application is open until December 21st 2025 at 11pm EDT. 
 
