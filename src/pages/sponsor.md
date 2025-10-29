@@ -29,7 +29,7 @@ Please consider supporting open hardware this year. Your donation pays our staff
 The Open Hardware summit is hosted by the Open Source Hardware Association (OSHWA). OSHWA is recognized by the IRS as a 501(c)(3) tax-exempt public charity and donations to the Open Hardware summit are tax deductible to the extent permitted by law.
 </blockquote>
 
-## Sponsorship levels
+## Sponsorship Levels/Corporate Membership Levels 
 
 **Community: $500 USD**
 
