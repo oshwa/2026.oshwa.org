@@ -26,7 +26,7 @@ DEADLINE: Sunday, December 21, 2025.
 
 More details to come! In the meantime, [get involved], [sign up for our newsletter][newsletter], or [drop us an email][email]!
 
-[submit your proposal]: https://presenters.oshwa-summit.org/2026/submit/S2V3VZ/profile/
+[submit your proposal]: https://docs.google.com/forms/d/e/1FAIpQLSeIzbN3yU869Q0NELzgmYi3uNFhi7BDWdBXq_WS2jyLoitLbg/viewform?usp=sharing&ouid=118172455364158311835
 [get involved]: #get-involved
 [newsletter]: https://oshwa.us19.list-manage.com/subscribe?u=3e1619d377d5a6c361ef3292b&id=ca147d8610
 [email]: mailto:summit@oshwa.org
