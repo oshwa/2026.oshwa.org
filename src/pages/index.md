@@ -6,7 +6,7 @@ OHS 2026 will take place in Berlin at [TU Berlin] on **May 23rd & 24th, 2026**!
 
 [TU Berlin]: https://www.tu.berlin
 
-[Get your tickets!]: https://ticket.nodeforum.org/OHS26/
+[get tickets]: https://ticket.nodeforum.org/OHS26/
 [get involved]: #get-involved
 [newsletter]: https://oshwa.us19.list-manage.com/subscribe?u=3e1619d377d5a6c361ef3292b&id=ca147d8610
 [email]: mailto:summit@oshwa.org
@@ -32,7 +32,7 @@ the world, you can find past schedules [here][2025], [here][2024], and [here][20
 [2024]: https://2024.oshwa.org
 [2023]: https://2023.oshwa.org
 
-Sound cool to you? [get involved], [sign up for our newsletter][newsletter], or [drop us an email][email]!
+Sound cool to you? [get tickets], [get involved], [sign up for our newsletter][newsletter], or [drop us an email][email]!
 
 P.S.: This year's lovely, risograph-inspired visual design was created by <a href="https://bleeptrack.de/" target="_blank">bleeptrack</a>! Check out their work!
 
