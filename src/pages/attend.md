@@ -7,7 +7,8 @@ title: Attend
 
 Open Hardware Summit takes place on **May 23rd & 24th, 2026**.
 
-Tickets will be available **soon**. In the meantime, you can [sign up for our newsletter][newsletter], or [drop us an email][email].
+Tickets are available [here][get tickets], from as low as 0 dollars for virtual!
+You can [sign up for our newsletter][newsletter], or [drop us an email][email].
 
 We'll have a student and reduced rate for in-person attendees if needed, please [email us][email].
 
