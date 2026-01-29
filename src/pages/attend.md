@@ -12,6 +12,7 @@ You can [sign up for our newsletter][newsletter], or [drop us an email][email].
 
 We'll have a student and reduced rate for in-person attendees if needed, please [email us][email].
 
+[get tickets]: https://ticket.nodeforum.org/OHS26/
 [newsletter]: https://oshwa.us19.list-manage.com/subscribe?u=3e1619d377d5a6c361ef3292b&id=ca147d8610
 [email]: mailto:summit@oshwa.org
 
