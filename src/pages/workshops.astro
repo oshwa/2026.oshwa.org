@@ -2,18 +2,127 @@
 import * as DateTime from "../datetime";
 import { getCollection } from "astro:content";
 import Basic from "../layouts/Basic.astro";
-import Schedule from "../components/Schedule.astro";
+import Date from "../components/Date.astro";
 
 const workshops = (await getCollection("workshops")).sort((a, b) =>
     DateTime.sorter(a.data.start, b.data.start),
 );
 
+const locations = Array.from(
+    new Set(workshops.map((workshop) => workshop.data.location || "TBD")),
+).sort();
+
+const startTimes = Array.from(
+    new Set(workshops.map((workshop) => workshop.data.start)),
+);
+
+const indexedWorkshops: Record<
+    string,
+    Record<string, (typeof workshops)[0] | null>
+> = Object.fromEntries(
+    startTimes.map((startTime) => [
+        startTime,
+        Object.fromEntries(locations.map((location) => [location, null])),
+    ]),
+);
+
+for (const workshop of workshops) {
+    indexedWorkshops[workshop.data.start][workshop.data.location ?? "TBD"] =
+        workshop;
+}
 ---
 
-<Basic title="Workshops" description="Workshop schedule" contentClass="workshops">
+<Basic
+    title="Workshops"
+    description="Workshop schedule"
+    contentClass="workshops"
+>
     <h1>Workshops</h1>
     <p>
         Workshops are on <strong>Saturday, May 24th</strong>.
     </p>
-    <Schedule urlRoot="/workshops" items={workshops} />
+
+    <div class="schedule fixed-grid has-6-cols">
+        <div class="grid">
+            {locations.map((location) => <h2>{location}</h2>)}
+            {
+                startTimes.map((startTime) => (
+                    <>
+                        <div class="time">
+                            <Date date={startTime} format={"h:mm A"} />
+                        </div>
+                        {locations.map((location) => {
+                            const workshop =
+                                indexedWorkshops[startTime][location];
+                            return (
+                                <div class="event">
+                                    {workshop &&
+                                        (!workshop.data.break ? (
+                                            <a
+                                                href={`/workshops/${workshop.id ?? ""}`}
+                                            >
+                                                {workshop.data.title}
+                                            </a>
+                                        ) : (
+                                            <div class="break">{workshop.data.title}</div>
+                                        ))}
+                                </div>
+                            );
+                        })}
+                    </>
+                ))
+            }
+        </div>
+    </div>
 </Basic>
+
+<style>
+    .schedule {
+        .grid {
+            row-gap: 0.5rem;
+            column-gap: 0.5rem;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        h2 {
+            margin: 0;
+            margin-bottom: 1rem;
+            font-family: var(--ohs-family-text);
+            font-weight: normal;
+        }
+
+        .time {
+            text-align: center;
+            font-size: var(--bulma-size-6);
+            font-weight: bold;
+            grid-column: 1 / 6;
+            background: color-mix(
+                in srgb,
+                var(--ohs-color-mixed-green) 40%,
+                transparent
+            );
+        }
+
+        .event {
+            font-size: var(--bulma-size-6);
+            /* background: var(--ohs-color-mixed-green); */
+            background: color-mix(
+                in srgb,
+                var(--ohs-color-aqua) 40%,
+                transparent
+            );
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding-inline: 0.25rem;
+                --drop-highlight-color: transparent;
+            }
+
+            .break {
+                text-align: center;
+            }
+        }
+    }
+</style>
