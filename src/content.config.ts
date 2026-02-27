@@ -28,6 +28,7 @@ const workshops = defineCollection({
         location: z.string().optional(),
         break: z.boolean().default(false),
         register: z.string().optional(),
+        placeholder: z.boolean().default(false),
     }),
 });
 

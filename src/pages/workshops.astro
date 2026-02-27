@@ -54,18 +54,33 @@ for (const workshop of workshops) {
                         {locations.map((location) => {
                             const workshop =
                                 indexedWorkshops[startTime][location];
+
+                            if (!workshop) {
+                                return <div class="event is-empty"></div>;
+                            }
+
+                            const isBreak = workshop.data.break ?? false;
+                            const isPlaceholder =
+                                workshop.data.placeholder ?? false;
+                            const hasLink = !isBreak && !isPlaceholder;
+
                             return (
-                                <div class="event">
-                                    {workshop &&
-                                        (!workshop.data.break ? (
-                                            <a
-                                                href={`/workshops/${workshop.id ?? ""}`}
-                                            >
-                                                {workshop.data.title}
-                                            </a>
-                                        ) : (
-                                            <div class="break">{workshop.data.title}</div>
-                                        ))}
+                                <div
+                                    class="event"
+                                    class:list={{
+                                        "is-break": isBreak,
+                                        "is-placeholder": isPlaceholder,
+                                    }}
+                                >
+                                    {hasLink ? (
+                                        <a
+                                            href={`/workshops/${workshop.id ?? ""}`}
+                                        >
+                                            {workshop.data.title}
+                                        </a>
+                                    ) : (
+                                        <span>{workshop.data.title}</span>
+                                    )}
                                 </div>
                             );
                         })}
@@ -108,23 +123,25 @@ for (const workshop of workshops) {
 
         .event {
             font-size: var(--bulma-size-6);
-            /* background: var(--ohs-color-mixed-green); */
             background: color-mix(
                 in srgb,
                 var(--ohs-color-aqua) 40%,
                 transparent
             );
 
-            a {
+            &.is-break {
+                text-align: center;
+            }
+
+            &> * {
                 display: block;
                 width: 100%;
                 height: 100%;
                 padding-inline: 0.25rem;
-                --drop-highlight-color: transparent;
             }
 
-            .break {
-                text-align: center;
+            a {
+                --drop-highlight-color: transparent;
             }
         }
     }

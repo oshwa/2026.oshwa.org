@@ -1,0 +1,38 @@
+---
+import Content from "./Content.astro";
+
+interface Props {
+    title: string;
+}
+
+const { title } = {
+    ...Astro.props,
+};
+---
+
+<div class="lightning-talk">
+    <div class="talk-title drop-highlight is-aqua">{title}</div>
+    <Content>
+        <slot />
+    </Content>
+</div>
+
+<style>
+    .lightning-talk {
+        margin-block: 4rem;
+
+        .talk-title {
+            font-family: var(--ohs-family-text);
+            font-size: var(--bulma-size-4);
+            font-weight: normal;
+            line-height: var(--bulma-content-heading-line-height);
+            margin-bottom: 1rem;
+        }
+
+        .presenter {
+            .name {
+                font-size: var(--bulma-size-5);
+            }
+        }
+    }
+</style>

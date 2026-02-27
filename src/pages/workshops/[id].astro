@@ -1,10 +1,8 @@
 ---
-import config from "../../metadata";
 import Presenter from "../../components/Presenter.astro";
-import AddToCalendar from "../../components/AddToCalendar.astro";
-import DateSpan from "../../components/DateSpan.astro";
 import Event from "../../layouts/Event.astro";
 import { getCollection, render } from "astro:content";
+import LightningTalk from "../../components/LightningTalk.astro";
 
 export async function getStaticPaths() {
     const workshops = await getCollection("workshops");
@@ -18,7 +16,6 @@ const { workshop } = Astro.props;
 const { Content } = await render(workshop);
 ---
 
-
 <Event event={workshop}>
-    <Content components={{ Presenter }} />
+    <Content components={{ Presenter, LightningTalk }} />
 </Event>
