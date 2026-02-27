@@ -12,6 +12,7 @@ export interface Props {
             presenter?: string;
             plenary?: boolean;
             break?: boolean;
+            location?: string;
         }
     }[];
 }
@@ -40,6 +41,7 @@ const { urlRoot, items } = Astro.props;
                             format={"h:mm A"}
                         />
                     </a>
+                    {item.data.location && <span class="item-location">{item.data.location}</span>}
                 </div>
                 <div class="column">
                     {item.data.plenary || item.data.break ? (

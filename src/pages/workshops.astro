@@ -1,0 +1,19 @@
+---
+import * as DateTime from "../datetime";
+import { getCollection } from "astro:content";
+import Basic from "../layouts/Basic.astro";
+import Schedule from "../components/Schedule.astro";
+
+const workshops = (await getCollection("workshops")).sort((a, b) =>
+    DateTime.sorter(a.data.start, b.data.start),
+);
+
+---
+
+<Basic title="Workshops" description="Workshop schedule" contentClass="workshops">
+    <h1>Workshops</h1>
+    <p>
+        Workshops are on <strong>Saturday, May 24th</strong>.
+    </p>
+    <Schedule urlRoot="/workshops" items={workshops} />
+</Basic>

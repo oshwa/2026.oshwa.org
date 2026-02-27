@@ -9,11 +9,11 @@ title: Schedule
 
 Talks will happen on **Friday, May 23rd, 2026**.
 
-<a class="button is-large" href="/talks">Talk schedule</a>
+<a class="button is-large" href="/talks">Talks schedule</a>
 
 ## Workshops & Breakouts
 
-More details coming soon!
+<a class="button is-large" href="/workshops">Workshops schedule</a>
 
 ## Exhibits
 

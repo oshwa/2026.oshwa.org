@@ -16,4 +16,18 @@ const talks = defineCollection({
     }),
 });
 
-export const collections = { talks };
+
+const workshops = defineCollection({
+    loader: glob({pattern: "**/*.mdx", base: "src/data/workshops/",}),
+    schema: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        start: z.string(),
+        end: z.string(),
+        presenter: z.string().optional(),
+        location: z.string().optional(),
+        break: z.boolean().default(false),
+    }),
+});
+
+export const collections = { talks, workshops };
