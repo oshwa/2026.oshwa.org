@@ -88,39 +88,16 @@
     background-position: var(--ds-left) var(--ds-top);
     background-repeat: no-repeat;
     box-shadow: var(--ds-left) var(--ds-top) var(--ds-bg);
-}
 
-/* Schedule pages */
-
-/* Event detail page (talks, workshops, etc.) */
-
-.event {
-    .event-title {
-        font-family: var(--ohs-family-display);
-        font-size: var(--bulma-size-3);
-        font-weight: var(--bulma-weight-extrabold);
-        line-height: var(--title-line-height);
-        text-decoration: underline;
-        text-decoration-color: var(--ohs-color-accent-pink);
-        text-decoration-thickness: 0.1em;
+    &.is-aqua {
+        --drop-highlight-color: var(--ohs-color-aqua);
     }
 
-    .event-presenter {
-        font-size: var(--bulma-size-5);
+    &.is-green {
+        --drop-highlight-color: var(--ohs-color-mixed-green);
     }
 
-    .event-time {
-        display: flex;
-        align-items: center;
-        line-height: var(--title-line-height);
-
-        .event-time-span {
-            flex: 1;
-            font-family: var(--ohs-family-display);
-            font-size: var(--bulma-size-5);
-            font-weight: var(--bulma-weight-extrabold);
-        }
+    &.is-sunflower {
+        --drop-highlight-color: var(--ohs-color-sunflower);
     }
 }
-
-
