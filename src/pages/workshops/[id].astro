@@ -3,7 +3,7 @@ import config from "../../metadata";
 import Presenter from "../../components/Presenter.astro";
 import AddToCalendar from "../../components/AddToCalendar.astro";
 import DateSpan from "../../components/DateSpan.astro";
-import Basic from "../../layouts/Basic.astro";
+import Event from "../../layouts/Event.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -18,31 +18,7 @@ const { workshop } = Astro.props;
 const { Content } = await render(workshop);
 ---
 
-<Basic title={`${workshop.data.title} | workshops`} contentClass="workshop">
-    <h1 class="item-title">{workshop.data.title}</h1>
-    <p class="item-time">
-        <DateSpan start={workshop.data.start} end={workshop.data.end} />
-        <AddToCalendar
-            title={`${workshop.data.title} | ${config.title.short}`}
-            start={workshop.data.start}
-            end={workshop.data.end}
-            location={workshop.data.location}
-            details={workshop.data.description}
-        />
-    </p>
-    {workshop.data.location && <p class="item-location">{workshop.data.location}</p>}
+
+<Event event={workshop}>
     <Content components={{ Presenter }} />
-</Basic>
-
-<style>
-    .item-time {
-        display: flex;
-        align-items: center;
-        line-height: var(--title-line-height);
-
-        .date-span {
-            flex: 1;
-            font-size: var(--bulma-size-5);
-        }
-    }
-</style>
+</Event>

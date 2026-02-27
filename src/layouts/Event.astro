@@ -1,0 +1,68 @@
+---
+import config from "../metadata";
+import { toTitleCase } from "remeda";
+import Basic from "./Basic.astro";
+import AddToCalendar from "../components/AddToCalendar.astro";
+import DateSpan from "../components/DateSpan.astro";
+
+interface Props {
+    event: {
+        id: string;
+        collection: string;
+        data: {
+            title: string;
+            start: string;
+            end: string;
+            location?: string;
+            description?: string;
+        };
+    };
+}
+
+const { event } = { ...Astro.props };
+const { collection, id } = event;
+const { title, start, end, location, description } = event.data;
+
+const collectionName = toTitleCase(collection);
+---
+
+<Basic
+    title={`${title} | ${collectionName}`}
+    contentClass={collection}
+>
+    <div class="event">
+        <h1 class="event-title">{title}</h1>
+        <div class="event-time">
+            <DateSpan start={start} end={end} />
+            <AddToCalendar
+                title={`${title} | ${config.title.short}`}
+                start={start}
+                end={end}
+                location={location}
+                details={description}
+            />
+        </div>
+        {location && <p class="event-location">{location}</p>}
+        <slot />
+    </div>
+</Basic>
+
+<style>
+    .event {
+        .event-title {
+            font-family: var(--ohs-family-text);
+            font-weight: normal;
+        }
+        .event-time {
+            display: flex;
+            align-items: center;
+            line-height: var(--title-line-height);
+            margin-bottom: 2rem;
+
+            .date-span {
+                flex: 1;
+                font-size: var(--bulma-size-5);
+            }
+        }
+    }
+</style>

@@ -1,16 +1,13 @@
 ---
-import config from "../../metadata";
 import Presenter from "../../components/Presenter.astro";
-import AddToCalendar from "../../components/AddToCalendar.astro";
-import DateSpan from "../../components/DateSpan.astro";
-import Basic from "../../layouts/Basic.astro";
+import Event from "../../layouts/Event.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
     const talks = await getCollection("talks");
-    return talks.map((talks) => ({
-        params: { id: talks.id },
-        props: { talk: talks },
+    return talks.map((talk) => ({
+        params: { id: talk.id },
+        props: { talk },
     }));
 }
 
@@ -18,31 +15,6 @@ const { talk } = Astro.props;
 const { Content } = await render(talk);
 ---
 
-<Basic title={`${talk.data.title} | Talks`} contentClass="talk">
-    <h1 class="item-title">{talk.data.title}</h1>
-    <p class="item-time">
-        <DateSpan start={talk.data.start} end={talk.data.end} />
-        <AddToCalendar
-            title={`${talk.data.title} | ${config.title.short}`}
-            start={talk.data.start}
-            end={talk.data.end}
-            location={talk.data.location}
-            details={talk.data.description}
-        />
-    </p>
-    {talk.data.location && <p class="item-location">{talk.data.location}</p>}
+<Event event={talk}>
     <Content components={{ Presenter }} />
-</Basic>
-
-<style>
-    .item-time {
-        display: flex;
-        align-items: center;
-        line-height: var(--title-line-height);
-
-        .date-span {
-            flex: 1;
-            font-size: var(--bulma-size-5);
-        }
-    }
-</style>
+</Event>

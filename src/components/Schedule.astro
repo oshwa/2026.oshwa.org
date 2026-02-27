@@ -74,6 +74,11 @@ const { urlRoot, items } = Astro.props;
 
 <style>
     .schedule {
+        margin-block: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
         .schedule-item {
             --title-line-height: 1.2;
             --drop-highlight-color: var(--bg);
@@ -108,9 +113,9 @@ const { urlRoot, items } = Astro.props;
             }
 
             .item-title {
-                font-family: var(--ohs-family-display);
+                font-family: var(--ohs-family-text);
                 font-size: var(--bulma-size-3);
-                font-weight: bold;
+                font-weight: normal;
                 line-height: var(--title-line-height);
             }
 

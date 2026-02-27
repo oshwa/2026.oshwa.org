@@ -24,9 +24,21 @@ const { name, image } = {
         )
     }
     <div class="column">
-        <h3>{name}</h3>
+        <div class="name drop-highlight is-green">{name}</div>
         <Content>
             <slot />
         </Content>
     </div>
 </div>
+
+<style>
+    .presenter {
+        .name {
+            font-family: var(--ohs-family-text);
+            font-weight: normal;
+            font-size: var(--bulma-size-4);
+            margin-bottom: 1rem;
+            line-height: var(--bulma-content-heading-line-height);
+        }
+    }
+</style>
