@@ -1,0 +1,19 @@
+---
+import { type DateTime, format } from "../datetime";
+
+interface Props {
+    start: string | Date | DateTime;
+    end: string | Date | DateTime;
+    timezone?: string;
+}
+
+const { start, end, timezone } = Astro.props;
+
+const yearAndDay = format(start, "MMMM D, YYYY", timezone);
+const startTime = format(start, "h:mm A", timezone);
+const endTime = format(end, "h:mm A z", timezone);
+---
+
+<span class="date-span">
+    {yearAndDay} @ {startTime} - {endTime}
+</span>

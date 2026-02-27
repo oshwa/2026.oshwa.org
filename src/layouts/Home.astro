@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Root from "../layouts/Root.astro";
 import Content from "../components/Content.astro";
 
 import Lee from "../people/lee.md";
@@ -7,12 +7,12 @@ import Sid from "../people/sid.md";
 import Logo from "../components/Logo.astro";
 ---
 
-<BaseLayout title="Open Hardware Summit 2026">
+<Root title="Open Hardware Summit 2026">
     <Logo />
-    <Content>
+    <Content classList={{home: true}}>
         <slot/>
         <h2>The team</h2>
 		<Lee />
 		<Sid />
     </Content>
-</BaseLayout>
+</Root>

@@ -36,14 +36,6 @@
 
 /* Customizations */
 
-.navbar-brand {
-    .navbar-item {
-        font-family: var(--ohs-family-display);
-        font-weight: bold;
-        color: var(--ohs-color-text);
-    }
-}
-
 .content {
     h1,
     h2,
@@ -65,6 +57,11 @@
         --drop-highlight-color: var(--ohs-color-aqua);
         color: var(--ohs-color-text);
     }
+
+    .button {
+        border: none;
+        border-radius: 0;
+    }
 }
 
 /* Drop shadow highlights for various bits */
@@ -80,7 +77,11 @@
 .content a {
     --ds-left: 0.05em;
     --ds-top: 0.4em;
-    --ds-bg: color-mix(in srgb, var(--drop-highlight-color, var(--ohs-color-aqua)) 50%, transparent);
+    --ds-bg: color-mix(
+        in srgb,
+        var(--drop-highlight-color, var(--ohs-color-aqua)) 50%,
+        transparent
+    );
     background-color: transparent;
     background-image: linear-gradient(var(--ds-bg), var(--ds-bg));
     background-size: 100% 100%;
@@ -89,4 +90,37 @@
     box-shadow: var(--ds-left) var(--ds-top) var(--ds-bg);
 }
 
-/* Other bits */
+/* Schedule pages */
+
+/* Event detail page (talks, workshops, etc.) */
+
+.event {
+    .event-title {
+        font-family: var(--ohs-family-display);
+        font-size: var(--bulma-size-3);
+        font-weight: var(--bulma-weight-extrabold);
+        line-height: var(--title-line-height);
+        text-decoration: underline;
+        text-decoration-color: var(--ohs-color-accent-pink);
+        text-decoration-thickness: 0.1em;
+    }
+
+    .event-presenter {
+        font-size: var(--bulma-size-5);
+    }
+
+    .event-time {
+        display: flex;
+        align-items: center;
+        line-height: var(--title-line-height);
+
+        .event-time-span {
+            flex: 1;
+            font-family: var(--ohs-family-display);
+            font-size: var(--bulma-size-5);
+            font-weight: var(--bulma-weight-extrabold);
+        }
+    }
+}
+
+

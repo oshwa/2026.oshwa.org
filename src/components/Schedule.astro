@@ -1,0 +1,131 @@
+---
+import Date from "../components/Date.astro";
+import type { DateTime } from "../datetime";
+
+export interface Props {
+    urlRoot: string;
+    items: {
+        id: string;
+        data: {
+            title: string;
+            start: string;
+            presenter?: string;
+            plenary?: boolean;
+            break?: boolean;
+        }
+    }[];
+}
+
+const { urlRoot, items } = Astro.props;
+---
+
+<div class="schedule">
+    {
+        items.map((item) => (
+            <div
+                id={`talk-${item.id}`}
+                class="columns schedule-item"
+                class:list={{
+                    "is-plenary": item.data.plenary,
+                    "is-break": item.data.break,
+                }}
+            >
+                <div class="column is-one-fifth item-time">
+                    <a
+                        class="item-start-time"
+                        href={`#talk-${item.id}`}
+                    >
+                        <Date
+                            date={item.data.start}
+                            format={"h:mm A"}
+                        />
+                    </a>
+                </div>
+                <div class="column">
+                    {item.data.plenary || item.data.break ? (
+                        <div class="item-title drop-highlight">
+                            {item.data.title}
+                        </div>
+                    ) : (
+                        <a
+                            class="item-title drop-highlight"
+                            href={`${urlRoot}/${item.id}`}
+                        >
+                            {item.data.title}
+                        </a>
+                    )}
+
+                    <p class="item-presenter">{item.data.presenter}</p>
+
+                    {!item.data.plenary && !item.data.break && (
+                        <p class="more-details">
+                            <a href={`${urlRoot}/${item.id}`}>
+                                More details
+                            </a>
+                        </p>
+                    )}
+                </div>
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .schedule {
+        .schedule-item {
+            --title-line-height: 1.2;
+            --drop-highlight-color: var(--bg);
+            --bulma-text: var(--fg);
+
+            &.is-plenary,
+            &.is-break {
+                --bg: var(--ohs-color-mixed-green);
+            }
+
+            .item-time {
+                display: grid;
+                place-content: start center;
+                gap: 0.1em;
+                text-align: center;
+                line-height: var(--title-line-height);
+
+                a {
+                    display: block;
+                    color: var(--fg);
+                    background-color: transparent;
+                    outline: none;
+                    --drop-highlight-color: var(--bg);
+                }
+
+                .item-start-time {
+                    font-family: var(--ohs-family-display);
+                    font-size: var(--bulma-size-3);
+                    font-weight: bold;
+                    line-height: var(--title-line-height);
+                }
+            }
+
+            .item-title {
+                font-family: var(--ohs-family-display);
+                font-size: var(--bulma-size-3);
+                font-weight: bold;
+                line-height: var(--title-line-height);
+            }
+
+            a.item-title {
+                display: block;
+            }
+
+            .item-presenter {
+                margin-top: 1rem;
+                font-size: var(--bulma-size-5);
+            }
+
+            .more-details {
+                a {
+                    --drop-highlight-color: var(--ohs-color-sunflower);
+                }
+            }
+        }
+    }
+</style>

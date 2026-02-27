@@ -1,18 +1,12 @@
 ---
-import Content from "../components/Content.astro";
-import BaseLayout from "./BaseLayout.astro";
+import type { ComponentProps } from "astro/types";
+import Basic from "./Basic.astro";
 
-interface Props {
-    title: string;
-    description?: string;
-    frontmatter?: Record<string, string>;
-}
+type Props = ComponentProps<typeof Basic>;
 
 let { title, description } = { ...Astro.props, ...Astro.props.frontmatter };
 ---
 
-<BaseLayout title={`${title} | Open Hardware Summit`} description={description}>
-    <Content classList={{ page: true }}>
-        <slot />
-    </Content>
-</BaseLayout>
+<Basic title={title} description={description} contentClass="page">
+    <slot />
+</Basic>

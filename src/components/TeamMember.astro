@@ -13,23 +13,20 @@ interface Props {
 
 const { name, role, image, bluesky } = Astro.props;
 const blueskyName = bluesky.split(".")[0];
-
-const linkItems = pluckSlotItems(await Astro.slots.render("links"));
-
 ---
 
 <div class="team-member columns">
     <div class="column">
-        <Image src={image} alt="Photo of {name}" />
+        <Image src={image} alt=`Photo of ${name}` />
     </div>
     <div class="column">
         <h3>{name}</h3>
         <div class="chips">
             <span class="role"><span class="drop-highlight">{role}</span></span>
-            <span><a slot="links" href={`https://bsky.app/profile/${bluesky}`}>@{blueskyName}</a></span>
-            {linkItems.map((item) => (
-                <span><Fragment set:html={item} /></span>
-            ))}
+            <span><a slot="links" href={`https://bsky.app/profile/${bluesky}`}
+                    >@{blueskyName}</a
+                ></span
+            >
         </div>
         <Content>
             <slot />
@@ -38,27 +35,27 @@ const linkItems = pluckSlotItems(await Astro.slots.render("links"));
 </div>
 
 <style>
-.chips {
-    --gap: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: var(--gap);
-    font-size: 1.25rem;
+    .chips {
+        --gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: var(--gap);
+        font-size: 1.25rem;
 
-    & > *:not(:first-child) {
-        &::before {
-            content: "●";
-            color: var(--ohs-color-sunflower);
-            line-height: 1rem;
-            font-size: 0.5rem;
-            user-select: none;
-            margin-inline-end: var(--gap);
+        & > *:not(:first-child) {
+            &::before {
+                content: "●";
+                color: var(--ohs-color-sunflower);
+                line-height: 1rem;
+                font-size: 0.5rem;
+                user-select: none;
+                margin-inline-end: var(--gap);
+            }
+        }
+
+        .role {
+            --drop-highlight-color: var(--ohs-color-mixed-green);
         }
     }
-
-    .role {
-        --drop-highlight-color: var(--ohs-color-mixed-green);
-    }
-}
 </style>

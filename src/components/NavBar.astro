@@ -1,14 +1,6 @@
 ---
 import config from "../metadata";
-const items = {
-    "Attend": "/attend",
-    "Sponsor": "/sponsor",
-    "Fellowship": "/fellowship",
-    "Code of Conduct": "/code-of-conduct",
-};
-
 const currentRoute = Astro.locals.route?.pathname;
-
 ---
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -32,8 +24,12 @@ const currentRoute = Astro.locals.route?.pathname;
     <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
             {
-                Object.entries(items).map(([name, url]) => (
-                    <a class="navbar-item" href={url} class:list={{"is-active": currentRoute == url}}>
+                Object.entries(config.nav).map(([name, url]) => (
+                    <a
+                        class="navbar-item"
+                        href={url}
+                        class:list={{ "is-active": currentRoute == url }}
+                    >
                         {name}
                     </a>
                 ))
@@ -68,15 +64,29 @@ const currentRoute = Astro.locals.route?.pathname;
 </script>
 
 <style>
-nav.navbar {
-    margin-bottom: 1rem;
+    nav.navbar {
+        margin-bottom: 1rem;
 
+        font-family: var(--ohs-family-display);
+        font-weight: bold;
 
-    font-family: var(--ohs-family-display);
-    font-weight: bold;
+        .navbar-link.is-active,
+        .navbar-link.is-selected,
+        a.navbar-item.is-active,
+        a.navbar-item.is-selected {
+            background-color: color-mix(
+                in srgb,
+                var(--ohs-color-mixed-green) 50%,
+                transparent
+            );
+        }
 
-    .navbar-link.is-active, .navbar-link.is-selected, a.navbar-item.is-active, a.navbar-item.is-selected  {
-        background-color: color-mix(in srgb, var(--ohs-color-mixed-green) 50%, transparent);
+        .navbar-brand {
+            .navbar-item {
+                font-family: var(--ohs-family-display);
+                font-weight: bold;
+                color: var(--ohs-color-text);
+            }
+        }
     }
-}
 </style>

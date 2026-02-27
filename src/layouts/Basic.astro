@@ -1,0 +1,20 @@
+---
+import config from "../metadata";
+import Content from "../components/Content.astro";
+import Root from "./Root.astro";
+
+interface Props {
+    title: string;
+    description?: string;
+    frontmatter?: Record<string, string>;
+    contentClass?: string;
+}
+
+let { title, description, contentClass } = { ...Astro.props, ...Astro.props.frontmatter };
+---
+
+<Root title={`${title} | ${config.title.short}`} description={description}>
+    <Content classList={contentClass ? { [contentClass]: true } : {}}>
+        <slot />
+    </Content>
+</Root>

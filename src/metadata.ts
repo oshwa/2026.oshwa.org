@@ -13,5 +13,13 @@ export default {
     },
     github: {
         url: "https://github.com/oshwa/2026.oshwa.org"
+    },
+    timezone: "America/New_York",
+    nav: {
+        "Attend": "/attend",
+        "Schedule": "/schedule",
+        "Sponsor": "/sponsor",
+        "Fellowship": "/fellowship",
+        "Code of Conduct": "/code-of-conduct",
     }
 } as const;

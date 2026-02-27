@@ -1,0 +1,39 @@
+---
+
+import config from "../metadata";
+
+import { type DateTime, datetime } from "../datetime";
+
+interface Props {
+    title: string;
+    start: string | Date | DateTime;
+    end: string | Date | DateTime;
+    timezone?: string;
+    location?: string;
+    details?: string;
+}
+
+const { title, location, details, start, end, timezone } = {
+    timezone: config.timezone,
+    ...Astro.props
+};
+
+// console.log(start);
+
+const datesFormat = "YYYYMMDD[T]HHmm00[Z]";
+const dates = `${datetime(start).utc().format(datesFormat)}/${datetime(end).utc().format(datesFormat)}`;
+
+// Reference: https://github.com/InteractionDesignFoundation/add-event-to-calendar-docs/blob/main/services/google.md
+
+
+const dst = new URL("https://calendar.google.com/calendar/r/eventedit");
+dst.searchParams.set("text", title);
+dst.searchParams.set("dates", dates);
+dst.searchParams.set("ctz", timezone);
+dst.searchParams.set("location", location ?? "");
+dst.searchParams.set("details", details ?? "");
+
+---
+<a class="add-to-calendar" href=`${dst.href}` target="_blank">
+    <slot>Add to Calendar</slot>
+</a>

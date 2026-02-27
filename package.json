@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.14.1"
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.18.0"
+  },
+  "devDependencies": {
+    "dayjs": "^1.11.19"
   }
 }

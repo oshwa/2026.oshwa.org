@@ -1,0 +1,32 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import Content from "./Content.astro";
+// import placeholderImage from "../../public/images/speaker-placeholder.webp";
+
+interface Props {
+    name: string;
+    image?: ImageMetadata;
+}
+
+const { name, image } = {
+    // image: placeholderImage,
+    ...Astro.props,
+};
+---
+
+<div class="presenter columns">
+    {
+        image && (
+            <div class="column">
+                <Image src={image} alt={`Photo of ${name}`} />
+            </div>
+        )
+    }
+    <div class="column">
+        <h3>{name}</h3>
+        <Content>
+            <slot />
+        </Content>
+    </div>
+</div>

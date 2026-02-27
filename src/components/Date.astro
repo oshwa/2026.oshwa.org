@@ -1,0 +1,17 @@
+---
+
+import { type DateTime, format as _format } from "../datetime";
+
+interface Props {
+    date: string | Date | DateTime;
+    format: string;
+    timezone?: string;
+}
+
+const { date, format, timezone } = Astro.props;
+
+const formatted = _format(date, format, timezone)
+
+---
+
+{formatted}
