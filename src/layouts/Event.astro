@@ -15,13 +15,14 @@ interface Props {
             end: string;
             location?: string;
             description?: string;
+            register?: string;
         };
     };
 }
 
 const { event } = { ...Astro.props };
 const { collection, id } = event;
-const { title, start, end, location, description } = event.data;
+const { title, start, end, location, description, register } = event.data;
 
 const collectionName = toTitleCase(collection);
 ---
@@ -42,8 +43,13 @@ const collectionName = toTitleCase(collection);
                 details={description}
             />
         </div>
-        {location && <p class="event-location">{location}</p>}
-        <slot />
+        <div class="event-info">
+            {location && <span class="event-location">{location}</span>}
+            {register && <a class="register" href={register} target="_blank">Register</a>}
+        </div>
+        <div class="event-content">
+            <slot />
+        </div>
     </div>
 </Basic>
 
@@ -57,12 +63,24 @@ const collectionName = toTitleCase(collection);
             display: flex;
             align-items: center;
             line-height: var(--title-line-height);
-            margin-bottom: 2rem;
 
             .date-span {
                 flex: 1;
                 font-size: var(--bulma-size-5);
             }
+        }
+        .event-info {
+            display: flex;
+            align-items: center;
+
+            .event-location {
+                flex: 1;
+                font-size: var(--bulma-size-5);
+            }
+        }
+
+        .event-content {
+            margin-top: 2rem;
         }
     }
 </style>
