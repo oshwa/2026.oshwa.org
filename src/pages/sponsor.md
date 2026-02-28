@@ -118,12 +118,6 @@ Would you like to have your logo on our badges, which sometimes light up, intera
 - Get your exclusive logo alongside the summit logo on our lanyards for this year's conference.
 - *Plus* everything included in the Fanatic level sponsorship.
 
-> Interested in being a headline sponsor?
->
-> <a href="https://secure.lglforms.com/form_engine/s/sb0TeprRqMfKEkMDJIZtwA" target="_blank" class="button">Donate now</a>
->
-> Questions? Email [summit-sponsors@oshwa.org](mailto:summit-sponsors@oshwa.org)
-
 **$3,000 Wifi sponsor - 1 available**
 - Your name and logo on signage near the registration table with the Wifi info  
 - *Plus* Everything included in Enthusiast level sponsorship
@@ -132,7 +126,13 @@ Would you like to have your logo on our badges, which sometimes light up, intera
 - Your name and logo on signage near the refreshment table
 - Opportunity for either morning or afternoon refreshment breaks
 - *Plus* Everything included in Enthusiast level sponsorship
-  
+ 
+> Interested in being a headline sponsor?
+>
+> <a href="https://secure.lglforms.com/form_engine/s/sb0TeprRqMfKEkMDJIZtwA" target="_blank" class="button">Donate now</a>
+>
+> Questions? Email [summit-sponsors@oshwa.org](mailto:summit-sponsors@oshwa.org)
+
 ## Details
 
 OSHWA loves our sponsors and we pride ourselves in treating all sponsors fairly and equally in their respective levels. We do not give different or additional perks outside of what is listed in each level. Speaking spots cannot be attained through donation.
