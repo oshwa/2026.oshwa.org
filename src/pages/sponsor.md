@@ -124,6 +124,15 @@ Would you like to have your logo on our badges, which sometimes light up, intera
 >
 > Questions? Email [summit-sponsors@oshwa.org](mailto:summit-sponsors@oshwa.org)
 
+**$3,000 Wifi sponsor - 1 available**
+- Your name and logo on signage near the registration table with the Wifi info  
+- *Plus* Everything included in Enthusiast level sponsorship
+
+**$3,000 Refreshment sponsor - 2 available**
+- Your name and logo on signage near the refreshment table
+- Opportunity for either morning or afternoon refreshment breaks
+- *Plus* Everything included in Enthusiast level sponsorship
+  
 ## Details
 
 OSHWA loves our sponsors and we pride ourselves in treating all sponsors fairly and equally in their respective levels. We do not give different or additional perks outside of what is listed in each level. Speaking spots cannot be attained through donation.
