@@ -7,11 +7,13 @@ title: Schedule
 
 ## Talks
 
-Talks will happen on **Friday, May 23rd, 2026**.
+Talks will happen on **Saturday, May 23rd, 2026**.
 
 <a class="button is-large" href="/talks">Talks schedule</a>
 
-## Workshops & Breakouts
+## Workshops & Breakouts 
+
+Workshops & Breakouts will happpen on **Sunday, May 24th, 2026**
 
 <a class="button is-large" href="/workshops">Workshops schedule</a>
 
