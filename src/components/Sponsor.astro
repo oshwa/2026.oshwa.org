@@ -1,0 +1,72 @@
+---
+import { root } from "astro:config/server";
+import { Image } from "astro:assets";
+import dynamicImportImage from "./dynamic-import-image";
+
+interface Props {
+    name: string;
+    url: string;
+    image?: ImageMetadata | string;
+    invert?: boolean;
+}
+
+let { name, url, image, invert } = Astro.props;
+
+const SponsorDataPath = new URL("./src/data/sponsors/", root);
+
+if (typeof image === "string") {
+    image = await dynamicImportImage(image, SponsorDataPath);
+}
+---
+
+<li>
+    <a href={url} target="_blank" title={name}>
+        {
+            image ? (
+                <Image
+                    src={image}
+                    alt={`${name} logo`}
+                    decoding="async"
+                    class:list={{ invert }}
+                />
+            ) : (
+                name
+            )
+        }
+    </a>
+</li>
+
+<style>
+    li {
+        margin: 0;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        width: 100%;
+        aspect-ratio: 2/1;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 2/1;
+        background-color: transparent;
+        outline: none;
+        text-align: center;
+        color: var(--ohs-color-primary);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        &.invert {
+            filter: invert(1);
+        }
+    }
+</style>

@@ -1,18 +1,20 @@
 ---
-import Root from "../layouts/Root.astro";
-import Content from "../components/Content.astro";
+import Root from "./Root.astro";
+import Content from "@components/Content.astro";
 
-import Lee from "../data/people/lee.md";
-import Sid from "../data/people/sid.md";
-import Logo from "../components/Logo.astro";
+import Lee from "@data/people/lee.md";
+import Sid from "@data/people/sid.md";
+import Logo from "@components/Logo.astro";
+import Sponsors from "@components/Sponsors.astro";
 ---
 
 <Root title="Open Hardware Summit 2026">
     <Logo />
-    <Content classList={{home: true}}>
-        <slot/>
+    <Content classList={{ home: true }}>
+        <slot />
         <h2>The team</h2>
-		<Lee />
-		<Sid />
+        <Lee />
+        <Sid />
     </Content>
+    <Sponsors />
 </Root>
