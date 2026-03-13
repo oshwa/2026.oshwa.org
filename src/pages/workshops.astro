@@ -1,8 +1,8 @@
 ---
 import * as DateTime from "../datetime";
 import { getCollection } from "astro:content";
-import Basic from "../layouts/Basic.astro";
-import Date from "../components/Date.astro";
+import Basic from "@layouts/Basic.astro";
+import Date from "@components/Date.astro";
 
 const workshops = (await getCollection("workshops")).sort((a, b) =>
     DateTime.sorter(a.data.start, b.data.start),

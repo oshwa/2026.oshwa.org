@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Page.astro
+layout: "@layouts/Page.astro"
 title: Sponsor
 ---
 
@@ -29,7 +29,7 @@ Please consider supporting open hardware this year. Your donation pays our staff
 The Open Hardware summit is hosted by the Open Source Hardware Association (OSHWA). OSHWA is recognized by the IRS as a 501(c)(3) tax-exempt public charity and donations to the Open Hardware summit are tax deductible to the extent permitted by law.
 </blockquote>
 
-## Sponsorship Levels/Corporate Membership Levels 
+## Sponsorship Levels/Corporate Membership Levels
 
 **Community: $500 USD**
 
@@ -119,14 +119,14 @@ Would you like to have your logo on our badges, which sometimes light up, intera
 - *Plus* everything included in the Fanatic level sponsorship.
 
 **$3,000 Wifi sponsor - 1 available**
-- Your name and logo on signage near the registration table with the Wifi info  
+- Your name and logo on signage near the registration table with the Wifi info
 - *Plus* Everything included in Enthusiast level sponsorship
 
 **$3,000 Refreshment sponsor - 2 available**
 - Your name and logo on signage near the refreshment table
 - Opportunity for either morning or afternoon refreshment breaks
 - *Plus* Everything included in Enthusiast level sponsorship
- 
+
 > Interested in being a headline sponsor?
 >
 > <a href="https://secure.lglforms.com/form_engine/s/sb0TeprRqMfKEkMDJIZtwA" target="_blank" class="button">Donate now</a>

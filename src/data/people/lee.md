@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/TeamMemberLayout.astro
+layout: "@layouts/TeamMemberLayout.astro"
 name: "Lee Wilkins"
 image: "./lee.jpg"
 role: "Summit chair"

@@ -1,9 +1,6 @@
 ---
-import EditLink from "../../plugins/edit-link/EditLink.astro";
+import EditLink from "@plugins/edit-link/EditLink.astro";
 import metadata from "../metadata"
-
-const filePath = Astro.locals.route?.entrypoint;
-const githubUrl = filePath ? `${metadata.github.url}/blob/main/${filePath}` : null;
 ---
 
 <footer class="footer">

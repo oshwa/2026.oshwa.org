@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Home.astro
+layout: "@layouts/Home.astro"
 ---
 
 OHS 2026 will take place in Berlin at [TU Berlin] on **May 23rd & 24th, 2026**!

@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/TeamMemberLayout.astro
+layout: "@layouts/TeamMemberLayout.astro"
 name: "Sid Drmay"
 image: "./sid.png"
 role: "Fellowship chair"
