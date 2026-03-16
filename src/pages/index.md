@@ -4,11 +4,12 @@ layout: "@layouts/Home.astro"
 
 OHS 2026 will take place in Berlin at [TU Berlin] on **May 23rd & 24th, 2026**!
 
-[get tickets] 
+[get your tickets here] 
 
 [TU Berlin]: https://www.tu.berlin
 
 [get tickets]: https://ticket.nodeforum.org/OHS26/
+[get your tickets here]: https://ticket.nodeforum.org/OHS26/
 [get involved]: #get-involved
 [newsletter]: https://oshwa.us19.list-manage.com/subscribe?u=3e1619d377d5a6c361ef3292b&id=ca147d8610
 [email]: mailto:summit@oshwa.org
