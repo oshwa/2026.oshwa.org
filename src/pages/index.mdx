@@ -1,10 +1,12 @@
 ---
 layout: "@layouts/Home.astro"
 ---
+import { Image } from 'astro:assets';
+import nodeImg from "./node.png";
 
 OHS 2026 will take place in Berlin at [TU Berlin] on **May 23rd & 24th, 2026**!
 
-[get your tickets here] 
+[get your tickets here]
 
 [TU Berlin]: https://www.tu.berlin
 
@@ -31,9 +33,14 @@ community.
 Our international event usually has around 300 attendees from around
 the world, you can find past schedules [here][2025], [here][2024], and [here][2023] (and for the past 10+ years).
 
+<Image src={nodeImg} alt="NODE Forum for Digital Arts logo" style="display: block; margin: 2rem auto; max-width: 25%;"/>
+
+OHS 2026 is hosted in partnership with [NODE Forum for Digital Arts][NODE], a Frankfurt-based non-profit organization that organizes events and workshops for artists, designers, and creative coders, and creatives.
+
 [2025]: https://2025.oshwa.org
 [2024]: https://2024.oshwa.org
 [2023]: https://2023.oshwa.org
+[NODE]: https://nodeforum.org/
 
 Sound cool to you? [get tickets], [get involved], [sign up for our newsletter][newsletter], or [drop us an email][email]!
 
@@ -41,13 +48,13 @@ P.S.: This year's lovely, risograph-inspired visual design was created by <a hre
 
 ## Get involved
 
-Here’s what we’re looking for:
+Here's what we're looking for:
 
 - People who can help us reach the weird, wonderful, and technical open source, Hacker, DIY, tech/art and maker community in **Berlin**, and all around Germany and Europe.
 - People who are connected with makerspaces, hackerspaces, labs or other creative spaces that can help spread the word all around the world.
 - People who are excited about reaching diverse and underrepresented populations.
 - Spaces interesting in hosting workshops, parties, community gatherings and other happenings.
-- Seasoned open source enthusiast **and** people who want to be involved in open source but aren’t sure how. No experience required.
+- Seasoned open source enthusiast **and** people who want to be involved in open source but aren't sure how. No experience required.
 - Be able to attend (or contribute to asynchronously) to meetings once a month, usually Wednesday evenings in US Eastern Time (`UTC-5`).
 
 We do not require that all presentations, organizers, or helpers be open source certified or contribute to open source projects, but only that you are enthusiastic about sharing and learning about open source work.
