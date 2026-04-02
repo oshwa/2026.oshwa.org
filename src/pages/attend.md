@@ -18,7 +18,7 @@ We'll have a student and reduced rate for in-person attendees if needed, please 
 
 ## Location
 
-Both days will take place at **Technische Universität Berlin** (TU Berlin). More specific details to come!
+Both days will take place at **Technische Universität Berlin** (TU Berlin) at at TU Main Campus Charlottenburg.
 
 ## Virtual
 
