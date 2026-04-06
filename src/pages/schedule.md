@@ -19,7 +19,7 @@ Workshops & Breakouts will happpen on **Sunday, May 24th, 2026**
 
 ## Exhibits
 
-More details coming soon!
+<a class="button is-large" href="/exhibits">Exhibits</a>
 
 ## Art Gallery
 

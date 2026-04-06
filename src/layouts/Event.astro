@@ -11,8 +11,8 @@ interface Props {
         collection: string;
         data: {
             title: string;
-            start: string;
-            end: string;
+            start?: string;
+            end?: string;
             location?: string;
             description?: string;
             register?: string;
@@ -27,25 +27,32 @@ const { title, start, end, location, description, register } = event.data;
 const collectionName = toTitleCase(collection);
 ---
 
-<Basic
-    title={`${title} | ${collectionName}`}
-    contentClass={collection}
->
+<Basic title={`${title} | ${collectionName}`} contentClass={collection}>
     <div class="event">
         <h1 class="event-title">{title}</h1>
-        <div class="event-time">
-            <DateSpan start={start} end={end} />
-            <AddToCalendar
-                title={`${title} | ${config.title.short}`}
-                start={start}
-                end={end}
-                location={location}
-                details={description}
-            />
-        </div>
+        {
+            (start && end) && (
+                <div class="event-time">
+                    <DateSpan start={start} end={end} />
+                    <AddToCalendar
+                        title={`${title} | ${config.title.short}`}
+                        start={start}
+                        end={end}
+                        location={location}
+                        details={description}
+                    />
+                </div>
+            )
+        }
         <div class="event-info">
             {location && <span class="event-location">{location}</span>}
-            {register && <a class="register" href={register} target="_blank">Register</a>}
+            {
+                register && (
+                    <a class="register" href={register} target="_blank">
+                        Register
+                    </a>
+                )
+            }
         </div>
         <div class="event-content">
             <slot />

@@ -1,0 +1,60 @@
+---
+import * as DateTime from "../datetime";
+import { getCollection } from "astro:content";
+import Basic from "@layouts/Basic.astro";
+import Schedule from "@components/Schedule.astro";
+
+const exhibits = (await getCollection("exhibits")).sort((a, b) =>
+    a.id.localeCompare(b.id),
+);
+---
+
+<Basic title="Exhibits" description="Exhibits" contentClass="exhibits">
+    <h1>Exhibits</h1>
+    <div class="exhibit-list">
+        {
+            exhibits.map((exhibit) => (
+                <div id={`exhibit-${exhibit.id}`} class="exhibit">
+                    <a
+                        href={`/exhibits/${exhibit.id}`}
+                        class="exhibit-title drop-highlight"
+                    >
+                        {exhibit.data.title}
+                    </a>
+                    <p class="exhibit-presenter">{exhibit.data.presenter}</p>
+                </div>
+            ))
+        }
+    </div>
+</Basic>
+
+<style>
+    .exhibit-list {
+        margin-block: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .exhibit {
+            --title-line-height: 1.2;
+            --drop-highlight-color: var(--bg);
+            --bulma-text: var(--fg);
+
+            .exhibit-title {
+                font-family: var(--ohs-family-text);
+                font-size: var(--bulma-size-3);
+                font-weight: normal;
+                line-height: var(--title-line-height);
+            }
+
+            a.exhibit-title {
+                display: block;
+            }
+
+            .exhibit-presenter {
+                margin-top: 1rem;
+                font-size: var(--bulma-size-5);
+            }
+        }
+    }
+</style>

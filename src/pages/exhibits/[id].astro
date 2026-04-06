@@ -1,0 +1,21 @@
+---
+import Presenter from "@components/Presenter.astro";
+import Event from "@layouts/Event.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const exhibits = await getCollection("exhibits");
+    return exhibits.map((exhibit) => ({
+        params: { id: exhibit.id },
+        props: { exhibit },
+    }));
+}
+
+const { exhibit } = Astro.props;
+const { Content } = await render(exhibit);
+---
+
+<Event event={exhibit}>
+    {exhibit.data.presenter && <Presenter name={exhibit.data.presenter} />}
+    <Content components={{ Presenter }} />
+</Event>
