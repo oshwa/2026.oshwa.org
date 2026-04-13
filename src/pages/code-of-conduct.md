@@ -62,7 +62,7 @@ No weapons are allowed at physical OSHWA events. Weapons include but are not lim
 
 ## Covid Policy
 
-We have many members of our community we want to keep safe! With that in mind, masking during this event is strongly encouraged. Please consider wearing a KN95 or better. We will have a limited amount of masks and rapid tests available so please plan accordingly. Also, we ask that you stay conscious of your travel path and any COVID hotspots you may move through, and test before the event if it makes sense for you.
+We have many members of our community we want to keep safe! With that in mind, masking during this event is strongly encouraged. Please consider wearing a KN95 or better.  Also, we ask that you stay conscious of your travel path and any COVID hotspots you may move through, and test before the event if it makes sense for you.
 
 For your consideration, there will be eating and drinking happening at this event. Students and staff will also be present in the building.
 
