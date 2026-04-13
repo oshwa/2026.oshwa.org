@@ -19,13 +19,17 @@ Workshops & Breakouts will happen on **Sunday, May 24th, 2026**
 
 ## Exhibits
 
+Exhibits will happen on **Saturday, May 23rd and Sunday, May 24th, 2026**
+
 <a class="button is-large" href="/exhibits">Exhibits</a>
 
 ## Art Gallery
 
-More details coming soon!
+Art Gallery will be open **Saturday, May 23rd and Sunday, May 24th, 2026**
 
 ## Performances
+
+Performances will happen at C-Base on **Saturday, May 23rd, 2026**
 
 <a class="button is-large" href="/performances">Performances</a>
 
