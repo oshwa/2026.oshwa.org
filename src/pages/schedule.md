@@ -13,7 +13,7 @@ Talks will happen on **Saturday, May 23rd, 2026**.
 
 ## Workshops & Breakouts
 
-Workshops & Breakouts will happpen on **Sunday, May 24th, 2026**
+Workshops & Breakouts will happen on **Sunday, May 24th, 2026**
 
 <a class="button is-large" href="/workshops">Workshops schedule</a>
 
@@ -27,8 +27,10 @@ More details coming soon!
 
 ## Performances
 
-More details coming soon!
+<a class="button is-large" href="/performances">Performances</a>
 
 ## Social events
 
-Social events will happen before, during, and after the conference! We'll have more details soon.
+Social events will happen before, during, and after the conference!
+
+<a class="button is-large" href="/social">Social events</a>
