@@ -35,6 +35,6 @@ Performances will happen at C-Base on **Saturday, May 23rd, 2026**
 
 ## Social events
 
-Social events will happen before, during, and after the conference!
+Social events will happen **Friday, May 22nd, Saturday, 23rd and Sunday, May 24th, 2026**
 
 <a class="button is-large" href="/social">Social events</a>
