@@ -6,12 +6,12 @@ interface Props {
 const { url } = Astro.props;
 ---
 
-<a class="tickets" href={url} target="_blank">
-    <slot>Tickets</slot>
+<a class="link" href={url} target="_blank">
+    <slot></slot>
 </a>
 
 <style>
-.tickets {
+.link {
     --drop-highlight-color: var(--ohs-color-sunflower);
 }
 </style>
