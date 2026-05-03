@@ -22,8 +22,6 @@ Both days will take place at **Technische Universität Berlin** (TU Berlin) in t
 
 Social events and other gatherings will happen at different locations **Friday May the 22nd, Saturday the 23rd and Sunday the 24th.** Be sure to check the Schedule page for more information.
 
-[Schedule]: https://2026.oshwa.org/social/](https://2026.oshwa.org/social/
-
 ## Virtual
 
 During the summit, you can participate virtually by watching the livestream on our [YouTube channel][youtube] and joining our [Discord] for online discussions during the event.
