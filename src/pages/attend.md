@@ -18,7 +18,9 @@ We'll have a student and reduced rate for in-person attendees if needed, please 
 
 ## Location
 
-Both days will take place at **Technische Universität Berlin** (TU Berlin) at at TU Main Campus Charlottenburg.
+Both days will take place at **Technische Universität Berlin** (TU Berlin) in the Main Building, Straaae des 17.Juni 135 10623, Berlin and social events and other gatherings will happen at different locations **Friday May the 22nd, Saturday the 23rd and Sunday the 24th.** Be sure to check the Schedule page for more information.
+
+[Schedule]: https://2026.oshwa.org/social/
 
 ## Virtual
 
@@ -26,8 +28,3 @@ During the summit, you can participate virtually by watching the livestream on o
 
 [youtube]: https://www.youtube.com/user/opensourcehardware
 [discord]: https://discord.gg/bMK7NqFWG9
-
-
-## Hotels
-
-More information to come!
