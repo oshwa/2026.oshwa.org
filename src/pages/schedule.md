@@ -31,7 +31,7 @@ Art Gallery will be open **Saturday, May 23rd and Sunday, May 24th, 2026**
 
 ## Performances
 
-Performances will happen at C-Base on **Saturday, May 23rd, 2026**
+Performances will happen at c-base on **Saturday, May 23rd, 2026**
 
 <a class="button is-large" href="/performances">Performances</a>
 
