@@ -27,6 +27,8 @@ Exhibits will happen on **Saturday, May 23rd and Sunday, May 24th, 2026**
 
 Art Gallery will be open **Saturday, May 23rd and Sunday, May 24th, 2026**
 
+<a class="button is-large" href="/art-gallery">Art Gallery</a>
+
 ## Performances
 
 Performances will happen at c-base on **Saturday, May 23rd, 2026**
