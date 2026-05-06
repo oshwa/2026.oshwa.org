@@ -78,12 +78,7 @@ Their work has been presented in Spain, Portugal, and Berlin, and has been recog
         <h3>Dolunay Solmaz</h3>
         <ul class="details"></ul>
         <p>
-            After graduating from the Department of Electrical and Electronics Engineering at Boğaziçi University, Dolunay Solmaz began her master’s studies in Sound Arts at the Istanbul Technical University’s Centre for Advanced Studies in Music (MIAM). Workshops and summer programmes she attended at Stanford University’s Center for Computer Research in Music and Acoustics (CCRMA) and New York University’s Interactive Telecommunications Program (ITP) further contributed to her academic and artistic development.
-
-Solmaz’s practice is shaped by the idea of instrumentalising tools; motors, induction microphones, hydrophones and sensors become not only technical components but also central subjects within her work. Embracing the accessibility and experimental ethos of DIY culture, she explores ways to actively involve audiences in the process. Her recent work focuses on multimodal systems that examine the experience of sound through material frameworks.
-
-Her interactive installation on auditory illusions, temporal perception and loops was exhibited at Arter’s Sonified symposium (2025) and at PdMaxCon25, organised by the University of Illinois Urbana-Champaign School of Music (2025). Her sound sculpture, composed of stainless-steel sheets and motors, was included in the exhibition From Nature (2025) at Harvestworks, New York.
-
-Solmaz’s primary research interests include exploring inaudible images and unheard sounds that lie beyond sensory thresholds.
+            Dolunay is an electrical engineer and sound artist. Her practice is shaped by the instrumentalization of technical tools; motors, inductor microphones, hydrophones, and sensors are reimagined as central subjects. She constructs unstable, responsive environments - often driven by feedback and proximity where listening becomes a site of negotiation between human intention, material resistance, and machine logic. Her recent research engages with
+goblinhood and sonic cyborgism as modes of undoing coherence: embracing noise, excess, and misalignment in sound. She studied Electronics Engineering at Boğaziçi University. She is currently pursuing a master’s degree in Music at the Istanbul Technical University’s Centre for Advanced Studies in Music, and will begin her MFA in Sound Art at Columbia University School of the Arts in Fall 2026. Her work has been presented at Arter Museum, Istanbul (2025); PdMaxCon25~, University of Illinois Urbana-Champaign (2025); and Harvestworks, New York (2025). She is currently in residency at Cité Internationale des Arts, Paris.
         </p>
     </div>
