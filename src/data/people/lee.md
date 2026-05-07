@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/TeamMemberLayout.astro"
 name: "Lee Wilkins"
-image: "./lee.jpg"
+image: "./lee.jpeg"
 role: "Summit chair"
 bluesky: leeborg.bsky.social
 ---
