@@ -18,7 +18,7 @@ We'll have a student and reduced rate for in-person attendees if needed, please 
 
 ## Location
 
-Both days will take place at **Technische Universität Berlin** (TU Berlin) at the main campus, building details TBA.
+Both days will take place at **Technische Universität Berlin** (TU Berlin) at the main campus, Straße des 17. Juni 136 10623 Berlin
 
 Social events and other gatherings will happen at different locations **Friday May the 22nd, Saturday the 23rd and Sunday the 24th.** Be sure to check the Schedule page for more information.
 
